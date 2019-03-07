@@ -21,29 +21,22 @@ $("document").ready(function(){
         }
         else{
 
+          var firstIndex = input.length + 1;
 
-            for(i=0;i<input.length;i++){
-              var counters = new array();
-              if (input.includes(vowels(i)){
-                counter[i]= input.indexOf()
-                 var slice1= input.slice(0,i-1);
-                 alert(slice1);
-                 console.log(input);
-                 var slice2 = input.slice(i,input.length);
-                 alert(slice2);
-                 $("#result").text(slice2+slice1+"ay");
-                 break;
-              }
+          for(i=0;i<5;i++){
+            index = input.indexOf(vowel[i]);
+            if ((index !== -1 ) && (index < firstIndex)){
+              firstIndex= index;
+            }//if
+          } //for
 
-
-            }
-
-
-
-
+          var slice1= input.slice(0,firstIndex);
+          alert(slice1);
+          var slice2 = input.slice(firstIndex,input.length);
+          alert(slice2);
+          $("#result").text(slice2+slice1+"ay");
          }
-             // $("#result").text(input);
-        }
+       } // if input
 
 
 
